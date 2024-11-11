@@ -1,0 +1,12 @@
+let number = 123456;
+console.log(number);
+let text = "Hello World!";
+console.log(text);
+let isVisible = true;
+console.log(isVisible);
+let y = true;
+console.log(y);
+let ug;
+console.log(ug);
+let data = null;
+console.log(data);

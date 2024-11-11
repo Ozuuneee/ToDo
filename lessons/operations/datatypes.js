@@ -1,0 +1,10 @@
+let number = 123456;
+console.log(number, typeof number);
+let text = "Hello World!";
+console.log(text, typeof text);
+let isInvisible = false;
+console.log(isInvisible, typeof isInvisible);
+let ug;
+console.log(ug, typeof ug);
+let data = null;
+console.log(data, typeof data);
