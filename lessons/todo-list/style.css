@@ -1,7 +1,7 @@
 * {
   margin: 0;
 }
-.body {
+body {
   background-color: rgba(26, 26, 26, 1);
   border-radius: 10px;
   width: 100vw;
@@ -10,11 +10,19 @@
 }
 header {
   width: 80vw;
-  background-color: white;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+#button-container {
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: end;
 }
 
 #button {
@@ -23,7 +31,10 @@ header {
   height: 44px;
   display: flex;
   border-radius: 4px;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
 }
 #todo {
   background-color: rgba(16, 16, 16, 1);
