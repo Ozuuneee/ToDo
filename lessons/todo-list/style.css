@@ -39,36 +39,14 @@ button {
   font-weight: 600;
   border: none;
 }
-#todo {
-  background-color: rgba(16, 16, 16, 1);
-  border: 1px solid rgba(51, 51, 51, 1);
-  min-width: 380px;
-  min-height: 850px;
-  border-radius: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+
+button:hover {
+  cursor: pointer;
 }
 
-#in-progress {
-  background-color: rgba(16, 16, 16, 1);
-  border: 1px solid rgba(51, 51, 51, 1);
-  min-width: 380px;
-  min-height: 850px;
-  border-radius: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#done {
-  background-color: rgba(16, 16, 16, 1);
-  border: 1px solid rgba(51, 51, 51, 1);
-  min-width: 380px;
-  min-height: 850px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 25px;
-}
-
+#todo,
+#in-progress,
+#done,
 #blocked {
   background-color: rgba(16, 16, 16, 1);
   border: 1px solid rgba(51, 51, 51, 1);
@@ -77,24 +55,7 @@ button {
   border-radius: 25px;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-#inner {
-  width: 340px;
-  height: 82px;
-  margin-top: 20px;
-  display: flex;
   position: relative;
-}
-#t5 {
-  width: 300px;
-  height: 42px;
-  display: flex;
-  flex: 1;
-  font-weight: 700;
-  font-size: 20px;
-  margin-left: 10px;
-  color: rgba(255, 255, 255, 1);
 }
 
 #todo #round-shape {
@@ -128,7 +89,11 @@ button {
   border-radius: 50%;
   margin-top: 4px;
 }
-#num {
+
+#num-todo,
+#num-in-progress,
+#num-done,
+#num-blocked {
   width: 10px;
   height: 15px;
   font-size: 12px;
@@ -138,33 +103,63 @@ button {
   position: absolute;
   right: 0;
 }
-#card1 {
-  background-color: rgba(26, 26, 26, 1);
+
+#inner {
   width: 340px;
-  height: 94px;
-  border-radius: 15px;
+  height: 82px;
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+}
+#t5 {
+  width: 300px;
+  height: 42px;
+  display: flex;
+  flex: 1;
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 1);
 }
 
-#card2 {
+.task-card {
   background-color: rgba(26, 26, 26, 1);
   width: 340px;
   height: 94px;
   border-radius: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
 }
 
-#card3 {
-  background-color: rgba(26, 26, 26, 1);
-  width: 340px;
-  height: 94px;
-  border-radius: 15px;
+.task-name {
+  color: white;
+  font-size: 16px;
+  flex-grow: 1;
 }
 
-#card4 {
-  background-color: rgba(26, 26, 26, 1);
-  width: 340px;
-  height: 94px;
-  border-radius: 15px;
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
 }
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.task-actions img {
+  width: 20px;
+  height: 20px;
+}
+
 #modal {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.4);
@@ -173,6 +168,7 @@ button {
   left: 0;
   bottom: 0;
   z-index: 3;
+  display: none;
 }
 
 #modal-content {
@@ -186,6 +182,7 @@ button {
   flex-direction: column;
   padding-left: 50px;
   padding-right: 50px;
+  position: relative;
 }
 
 #modal-content > h2 {
@@ -196,7 +193,9 @@ button {
   margin-top: 50px;
   margin-bottom: 10px;
 }
-input {
+
+input,
+select {
   width: 299px;
   height: 49px;
   border: 1px solid rgba(153, 153, 153, 1);
@@ -213,4 +212,12 @@ input {
   width: 300px;
   height: 50px;
   margin-top: 100px;
+}
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
