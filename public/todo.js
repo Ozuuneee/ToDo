@@ -74,7 +74,7 @@ function deleteTask(taskCard) {
   taskCard.remove();
   updateTaskCount();
 }
-
+x;
 function moveTaskToNewStatus(taskCard, oldStatus, newStatus) {
   const oldContainer = document.getElementById(`task-list-${oldStatus}`);
   oldContainer.removeChild(taskCard);
