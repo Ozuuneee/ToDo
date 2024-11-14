@@ -6,14 +6,15 @@ function openModal(task = null) {
   const modalTitle = document.querySelector("#modal-content > h2");
   if (task) {
     modalTitle.innerText = "Edit task";
-    document.getElementById("text").value = task.querySelector(".task-name").innerText;
+    document.getElementById("text").value =
+      task.querySelector(".task-name").innerText;
     document.getElementById("status").value = task.dataset.status;
     taskToEdit = task;
   } else {
     modalTitle.innerText = "Add task";
     taskToEdit = null;
     document.getElementById("text").value = "";
-    document.getElementById("status").value = "todo";
+    document.getElementById("status").value = "select";
   }
 }
 
