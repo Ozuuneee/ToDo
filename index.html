@@ -31,7 +31,11 @@
         </div>
         <div id="task-list-todo"></div>
       </div>
-      <div id="in-progress" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
+      <div
+        id="in-progress"
+        ondrop="drop(event, 'in-progress')"
+        ondragover="allowDrop(event)"
+      >
         <div id="inner">
           <div id="round-shape"></div>
           <div id="t5">In Progress</div>
@@ -47,7 +51,11 @@
         </div>
         <div id="task-list-done"></div>
       </div>
-      <div id="blocked" ondrop="drop(event, 'blocked')" ondragover="allowDrop(event)">
+      <div
+        id="blocked"
+        ondrop="drop(event, 'blocked')"
+        ondragover="allowDrop(event)"
+      >
         <div id="inner">
           <div id="round-shape"></div>
           <div id="t5">Blocked</div>
@@ -60,7 +68,6 @@
           <h2>Enter task</h2>
           <input type="text" id="text" placeholder="Task name..." />
           <select id="status">
-            <option value="select">Select status</option>
             <option value="todo">To Do</option>
             <option value="in-progress">In Progress</option>
             <option value="done">Done</option>
